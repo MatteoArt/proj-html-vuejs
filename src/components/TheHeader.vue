@@ -63,6 +63,10 @@ header {
         @include d-flex;
         align-items: center;
         padding: 7px 3px;
+        font-size: 14px;
+        font-weight: 600;
+        gap: 4px;
+        cursor: pointer;
 
     }
     .card-black {
@@ -70,15 +74,21 @@ header {
         color: $color_primary;
         border-radius: 3px;
     }
-    .card-white {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+    
     .icon {
         width: 30px;
 
         img {
             width: 100%;
+            filter: invert(1);
+        }
+    }
+    .card-white {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        img {
+            filter: invert(0);
         }
     }
 }

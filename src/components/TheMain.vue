@@ -24,5 +24,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/_variables.scss" as *;
+@use "../styles/partials/mixins.scss" as *;
 
+.search-list {
+    @include d-flex;
+}
 </style>
