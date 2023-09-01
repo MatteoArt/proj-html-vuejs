@@ -31,7 +31,8 @@ export default {
             </div>
         </nav>
         <div class="card-container">
-            <div class="card" v-for="card in cards">
+            <div class="card" v-for="card in cards" 
+            :class="{ 'card-black' : card.caption, 'card-white' : !card.caption}">
                 <div class="icon">
                     <img :src="getImgPath(card.icon)" :alt="card.icon">
                 </div>
@@ -49,16 +50,29 @@ export default {
 header {
     @include d-flex;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
 }
 
 .card-container {
     @include d-flex;
+    gap: 5px;
 
     .card {
         @include d-flex;
         align-items: center;
+        padding: 7px 3px;
 
-
+    }
+    .card-black {
+        background-color: $color_secondary;
+        color: $color_primary;
+        border-radius: 3px;
+    }
+    .card-white {
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .icon {
         width: 30px;
