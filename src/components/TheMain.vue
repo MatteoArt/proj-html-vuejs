@@ -27,9 +27,9 @@ export default {
                     v-if="index>=2 && index<=6"><i class="fa-solid fa-caret-down fa-sm"></i></span>
                 </div>
             </div>
-
-            <CarList></CarList>
             
+            <CarList></CarList>
+
         </div>
     </section>
 </template>
@@ -38,6 +38,9 @@ export default {
 @use "../styles/partials/_variables.scss" as *;
 @use "../styles/partials/mixins.scss" as *;
 
+section {
+    padding: 30px 0;
+}
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -48,6 +51,7 @@ export default {
     padding: 15px 3px 15px 20px;
     font-size: small;
     border-radius: 4px;
+    cursor: pointer;
 
     span {
         margin-left: 15px;
