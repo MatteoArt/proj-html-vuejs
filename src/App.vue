@@ -1,11 +1,13 @@
 <script>
 
 import TheHeader from './components/TheHeader.vue';
+import TheMain from './components/TheMain.vue';
 import TheFooter from './components/TheFooter.vue';
 
 export default {
     components: {
         TheHeader,
+        TheMain,
         TheFooter,
     },
     data() {
@@ -39,6 +41,10 @@ export default {
                     }
                 ]
             },
+            mainData: {
+                searchList: ["Keywords","Location","All Categories",
+            "Brand","Fuel Type","Transmission","Status","Search"],
+            },
             footerData: {
                 accountMenu: ["My Account",
                     "My Account",
@@ -65,6 +71,8 @@ export default {
 <template>
     <TheHeader :navList="headerData.navLinks" 
     :cards="headerData.headerCard"></TheHeader>
+
+    <TheMain :search="mainData.searchList"></TheMain>
 
     <TheFooter :menuList="footerData.accountMenu" 
     :links="footerData.linksMenu"></TheFooter>
