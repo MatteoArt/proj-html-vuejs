@@ -1,10 +1,12 @@
 <script>
 
 import CarList from './CarList.vue';
+import CardsWrapper from './CardsWrapper.vue';
 
 export default {
     components: {
         CarList,
+        CardsWrapper,
     },
     props: {
         search: {
@@ -29,6 +31,8 @@ export default {
             </div>
             
             <CarList></CarList>
+            <CardsWrapper></CardsWrapper>
+            <span>Bottone</span>
 
         </div>
     </section>
