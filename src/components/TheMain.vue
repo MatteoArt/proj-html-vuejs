@@ -32,8 +32,28 @@ export default {
             
             <CarList></CarList>
             <CardsWrapper></CardsWrapper>
-            <span>Bottone</span>
+            <div class="row-btn">
+            <span class="btn">
+                <span class="align-btn">Show All Cars <i class="fa-solid fa-arrow-right fa-sm"></i></span>
+            </span></div>
 
+        </div>
+        <div class="container">
+
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="about">
+                <i class="fa-regular fa-thumbs-up fa-2xl"></i>
+                <span style="display: block;">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </span>
+                <h2 style="margin: 30px 0 15px;">What Are Our Customers Saying ?</h2>
+                <p style="font-size: 14px;">Opinions from our happy customers.</p>
+            </div>
         </div>
     </section>
 </template>
@@ -45,9 +65,38 @@ export default {
 section {
     padding: 30px 0;
 }
+section#about {
+    min-height: 500px;
+    background-image: url("../assets/comment-bg-autocar.jpg");
+    background-size: cover;
+}
 .container {
     max-width: 1100px;
     margin: 0 auto;
+}
+.row-btn {
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    color: $color_primary;
+    background-color: $color_secondary;
+    font-size: 14px;
+    font-weight: 600;
+}
+.about {
+    text-align: center;
+    color: $color_primary;
+
+}
+.align-btn {
+    @include d-flex;
+    align-items: center;
+
+    i {
+        padding-left: 4px;
+    }
 }
 .btn-search {
     border: 1px solid $color_gray;
