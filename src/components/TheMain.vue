@@ -2,11 +2,13 @@
 
 import CarList from './CarList.vue';
 import CardsWrapper from './CardsWrapper.vue';
+import UserList from "./UserList.vue";
 
 export default {
     components: {
         CarList,
         CardsWrapper,
+        UserList,
     },
     props: {
         search: {
@@ -53,6 +55,16 @@ export default {
                 </span>
                 <h2 style="margin: 30px 0 15px;">What Are Our Customers Saying ?</h2>
                 <p style="font-size: 14px;">Opinions from our happy customers.</p>
+            </div>
+            <UserList></UserList>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="last-section-div">
+                <span>icona da inserire</span>
+                <h2>Resent Articles</h2>
+                <p style="font-size: 14px;">Useful information about car.</p>
             </div>
         </div>
     </section>
@@ -126,5 +138,13 @@ section#about {
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+}
+.last-section-div {
+    text-align: center;
+    color: $color_secondary;
+
+    h2 {
+        margin-bottom: 40px;
+    }
 }
 </style>
