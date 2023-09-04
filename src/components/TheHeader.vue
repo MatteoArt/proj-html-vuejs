@@ -53,6 +53,11 @@ header {
     justify-content: center;
     gap: 20px;
     padding-bottom: 10px;
+    background-color: $color_smoke;
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    width: 100%;
 }
 
 .card-container {

@@ -5,6 +5,7 @@ import CardsWrapper from './CardsWrapper.vue';
 import UserList from "./UserList.vue";
 import ArticleList from './ArticleList.vue';
 import SectionVehicle from './SectionVehicle.vue';
+import Slider from './Slider.vue';
 
 export default {
     components: {
@@ -12,7 +13,8 @@ export default {
         CardsWrapper,
         UserList,
         ArticleList,
-        SectionVehicle
+        SectionVehicle,
+        Slider
     },
     props: {
         search: {
@@ -25,6 +27,7 @@ export default {
 </script>
 
 <template>
+    <Slider></Slider>
     <section>
         <div class="container">
             <div class="search-list">
