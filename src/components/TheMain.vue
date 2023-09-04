@@ -4,6 +4,7 @@ import CarList from './CarList.vue';
 import CardsWrapper from './CardsWrapper.vue';
 import UserList from "./UserList.vue";
 import ArticleList from './ArticleList.vue';
+import SectionVehicle from './SectionVehicle.vue';
 
 export default {
     components: {
@@ -11,6 +12,7 @@ export default {
         CardsWrapper,
         UserList,
         ArticleList,
+        SectionVehicle
     },
     props: {
         search: {
@@ -43,7 +45,7 @@ export default {
 
         </div>
         <div class="container">
-
+            <SectionVehicle></SectionVehicle>
         </div>
     </section>
     <section id="about">
