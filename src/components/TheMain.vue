@@ -3,12 +3,14 @@
 import CarList from './CarList.vue';
 import CardsWrapper from './CardsWrapper.vue';
 import UserList from "./UserList.vue";
+import ArticleList from './ArticleList.vue';
 
 export default {
     components: {
         CarList,
         CardsWrapper,
         UserList,
+        ArticleList,
     },
     props: {
         search: {
@@ -59,13 +61,16 @@ export default {
             <UserList></UserList>
         </div>
     </section>
-    <section>
+    <section style="background-color: #FBFBFB; padding: 20px 0 50px;">
         <div class="container">
             <div class="last-section-div">
-                <span>icona da inserire</span>
+                <div class="logo-section-container">
+                    <img src="../assets/LogoSection.png" alt="logo">
+                </div>
                 <h2>Resent Articles</h2>
                 <p style="font-size: 14px;">Useful information about car.</p>
             </div>
+            <ArticleList></ArticleList>
         </div>
     </section>
 </template>
@@ -83,7 +88,7 @@ section#about {
     background-size: cover;
 }
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .row-btn {
@@ -96,6 +101,7 @@ section#about {
     background-color: $color_secondary;
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 .about {
     text-align: center;
@@ -144,7 +150,16 @@ section#about {
     color: $color_secondary;
 
     h2 {
-        margin-bottom: 40px;
+        margin: 12px 0;
+    }
+}
+
+.logo-section-container {
+    width: 90px;
+    margin: auto;
+
+    img {
+        width: 100%;
     }
 }
 </style>
