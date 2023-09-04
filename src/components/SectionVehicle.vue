@@ -12,7 +12,19 @@ export default {
 
 <template>
     <div class="wrapper">
-        <div class="item"></div>
+        <div class="item">
+            <div class="img-container-autocar">
+                <img src="../assets/about-car.png" alt="autocar">
+                <div class="circle circle-left">
+                    <h2>24</h2>
+                    <span>Years of<br> Experience</span>
+                </div>
+                <div class="circle circle-right">
+                    <h2>240</h2>
+                    <span>Special Expert<br> Team</span>
+                </div>
+            </div>
+        </div>
         <div class="item">
             <h2>Want to buy or sell a vehicle?</h2>
             <p>
@@ -80,8 +92,10 @@ export default {
 
         &:first-child {
             flex-basis: 60%;
-            background-image: url("../assets/circle-auto-car.png");
-            background-size: cover;
+            background-image: url("../assets/background-car.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         &:last-child {
@@ -122,6 +136,7 @@ export default {
     @include my-btn;
     margin-top: 4px;
 }
+
 .align {
     @include align-button;
     gap: 5px;
@@ -130,4 +145,42 @@ export default {
         margin-top: 2px;
     }
 }
-</style>
+
+.img-container-autocar {
+    width: 500px;
+    margin: auto;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.circle {
+    width: 162px;
+    height: 162px;
+    background-color: $color_secondary;
+    border-radius: 50%;
+    position: absolute;
+    color: $color_primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.circle-left {
+    top: 0;
+    left: 0;
+}
+
+.circle-right {
+    bottom: 0;
+    right: 0;
+}</style>

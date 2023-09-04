@@ -44,7 +44,7 @@ export default {
             </span></div>
 
         </div>
-        <div class="container">
+        <div class="container" style="padding: 60px 0;">
             <SectionVehicle></SectionVehicle>
         </div>
     </section>
